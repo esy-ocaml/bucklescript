@@ -31,9 +31,8 @@
     "buildsInSource": true,
     "build": [
       "node scripts/install.js",
-      "cp ./bin/* $cur__bin/",
-      "touch ./foo.txt",
-      "mkdir $cur__lib/ocaml/ && cp ./lib/ocaml/* $cur__lib/ocaml/"
+      "cp $cur__target_dir/bin/* $cur__bin/",
+      "mkdir $cur__lib/ocaml/ && cp $cur__target_dir/lib/ocaml/* $cur__lib/ocaml/"
     ]
   },
   "bin" : {

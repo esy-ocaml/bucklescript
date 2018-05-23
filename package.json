@@ -31,8 +31,8 @@
     "coveralls": "npm run-script coverage && node ./node_modules/.bin/coveralls < coverage/lcov.info",
     "postinstall": "node scripts/install.js"
   },
-  "name": "bs-platform",
-  "version": "4.0.6",
+  "name": "fb-bs-platform",
+  "version": "4.0.6000",
   "description": "bucklescript compiler, ocaml standard libary by bucklescript and its required runtime support",
   "repository": {
     "type": "git",

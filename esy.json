@@ -1,0 +1,100 @@
+{
+  "name": "fb-bs-platform",
+  "version": "4.0.3000",
+  "devDependencies": {
+    "ocaml": "~4.2.3000"
+  },
+  "peerDependencies": {
+    "ocaml": " >= 4.2.3"
+  },
+  "esy": {
+    "build": [
+      [
+        "node",
+        "scripts/install.js"
+      ],
+      [
+        "cp",
+        "-r",
+        "-f",
+        "#{self.target_dir / 'bsconfig.json'}",
+        "#{self.install}"
+      ],
+      [
+        "cp",
+        "-r",
+        "-f",
+        "#{self.target_dir / 'esy.json'}",
+        "#{self.install}"
+      ],
+      [
+        "cp",
+        "-r",
+        "-f",
+        "#{self.target_dir / 'jscomp'}",
+        "#{self.install}"
+      ],
+      [
+        "cp",
+        "-r",
+        "-f",
+        "#{self.target_dir / 'lib'}",
+        "#{self.install}"
+      ],
+      [
+        "cp",
+        "-r",
+        "-f",
+        "#{self.target_dir / 'scripts'}",
+        "#{self.install}"
+      ],
+      [
+        "cp",
+        "-r",
+        "-f",
+        "#{self.target_dir / 'vendor'}",
+        "#{self.install}"
+      ]
+    ],
+    "buildsInSource": true,
+    "exportedEnv": {
+      "bs_custom_resolution": {
+        "val": "true",
+        "scope": "global"
+      },
+      "bs_platform__install": {
+        "val": "#{self.install}",
+        "scope": "global"
+      },
+      "PATH": {
+        "val": "#{fb-bs-platform.lib : $PATH}",
+        "scope": "global"
+      }
+    }
+  },
+  "description": "bucklescript compiler for use in esy, ocaml standard libary by bucklescript and its required runtime support",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bucklescript/bucklescript.git"
+  },
+  "keywords": [
+    "ocaml",
+    "bucklescript",
+    "stdlib",
+    "functional programming"
+  ],
+  "author": {
+    "name": "Hongbo Zhang"
+  },
+  "maintainers": [
+    {
+      "name": "hongbo_zhang",
+      "email": "bobzhang1988@gmail.com"
+    }
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/bucklescript/bucklescript/issues"
+  },
+  "homepage": "https://github.com/bucklescript/bucklescript#readme"
+}

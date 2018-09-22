@@ -1,6 +1,6 @@
 {
   "name": "fb-bs-platform",
-  "version": "4.0.6004",
+  "version": "4.0.6007",
   "devDependencies": {
     "ocaml": "~4.2.3000"
   },
@@ -18,6 +18,13 @@
         "-r",
         "-f",
         "#{self.target_dir / 'bsconfig.json'}",
+        "#{self.install}"
+      ],
+      [
+        "cp",
+        "-r",
+        "-f",
+        "#{self.target_dir / 'package.json'}",
         "#{self.install}"
       ],
       [

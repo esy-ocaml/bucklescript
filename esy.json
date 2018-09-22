@@ -1,6 +1,6 @@
 {
   "name": "fb-bs-platform",
-  "version": "4.0.3000",
+  "version": "4.0.6008",
   "devDependencies": {
     "ocaml": "~4.2.3000"
   },
